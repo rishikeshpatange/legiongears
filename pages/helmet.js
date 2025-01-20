@@ -10,6 +10,7 @@ const helmets = ({ products }) => {
   return (
     <section className="text-gray-600 body-font">
       <div className="container  mt-10 mb-10 p-4 ">
+        <h1>helmets</h1>
         <div className="flex flex-wrap ">
           {Object.keys(products).map((item) => {
             return <Link key={item._id} href={`/product/${products[item].slug}`}>
