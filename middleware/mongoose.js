@@ -1,23 +1,13 @@
 
-
 import mongoose from "mongoose";
 
-const connectDb = async () => {
-  if (mongoose.connections[0].readyState) {
-    // Already connected
-    return;
+const connectDb = handler=> async (req, res)=>{
+  if(mongoose.connections[0].readyState){
+    return handler(req, res)
   }
+  await mongoose.connect(process.env.MONGO_URL)
 
-  try {
-    await mongoose.connect(process.env.MONGO_URL, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-    console.log("Connected to MongoDB");
-  } catch (error) {
-    console.error("Error connecting to MongoDB:", error);
-    throw new Error("Database connection failed");
-  }
-};
+  return handler(req, res)
+}
 
-export default connectDb;
+export default connectDb
