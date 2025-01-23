@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Himi 2 Edition",
+    "slug": "himi-sda-edition-rishi",
+    "desc": "The result of over 10 years of intensive study, development, and testing, the goal of the Supertech family of helmets is to create the most advanced....",
+    "img": "//www.alpinestars.com/cdn/shop/files/8302823-839-fr_LimitedEditionSupertechM10Squad23Helmet.jpg?v=1715030571&width=1600",
+    "category": "helmets",
+    "size": ["XL"],
+    "color": ["blue"],
+    "price": 51399,
+    "availabelQty": 1
+  },
+  {
+    "title": "Rider Gloves",
+    "slug": "rider-gloves",
+    "desc": "Premium gloves designed for comfort and durability.",
+    "img": "//www.alpinestars.com/cdn/shop/files/8302823-839-fr_LimitedEditionSupertechM10Squad23Helmet.jpg?v=1715030571&width=1600",
+    "category": "gloves",
+    "size": ["M", "L"],
+    "color": ["red", "black"],
+    "price": 2999,
+    "availabelQty": 10
+  }
+]
