@@ -3,6 +3,7 @@ import '../styles/globals.css';
 import Navbar from "@/components/Navbar";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import Fotter from "@/components/Fotter";
 
 export default function App({ Component, pageProps }) {
   const [cart, setCart] = useState({})
@@ -98,8 +99,8 @@ export default function App({ Component, pageProps }) {
 
 
   return <>
-    <Navbar Logout={logout} user={user} key={key} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subTotal={subTotal} />
+    <Navbar key={key} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subTotal={subTotal} />
     <Component cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subTotal={subTotal}  {...pageProps} buyNow={buyNow} />
-
+    <Fotter/>
   </>
 }

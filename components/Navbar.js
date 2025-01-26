@@ -1,112 +1,189 @@
-import React, { useRef, useState } from 'react';
+import { useState } from "react";
+import {
+  AiOutlineShoppingCart,
+  AiFillCloseCircle,
+  AiOutlinePlusCircle,
+  AiOutlineMinusCircle,
+} from "react-icons/ai";
+import { HiMenuAlt3 } from "react-icons/hi";
 import Link from "next/link";
-import { AiFillCloseCircle, AiOutlineShoppingCart, AiOutlinePlusCircle, AiOutlineMinusCircle } from "react-icons/ai";
-import { MdAccountCircle } from "react-icons/md";
 
-
-const Navbar = ({Logout,user, cart, addToCart, removeFromCart, clearCart, subTotal }) => {
-
-  // console.log(cart, addToCart, removeFromCart, clearCart, subTotal)
-  const [dropdown, setDropdown] = useState(false)
-
-  const toggleDropdown = () =>{
-    setDropdown(!dropdown)
-  }
+const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   const toggleCart = () => {
-    if (ref.current.classList.contains('translate-x-full')) {
-      ref.current.classList.remove('translate-x-full')
-      ref.current.classList.add('translate-x-0')
-    }
-    else if (!ref.current.classList.contains('translate-x-full')) {
-      ref.current.classList.remove('translate-x-0')
-      ref.current.classList.add('translate-x-full')
-    }
+    setIsCartOpen(!isCartOpen);
+  };
 
-  }
-
-  const ref = useRef()
-
-
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
 
   return (
-    <div>
-      <nav className="bg-black">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link href="/" className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white " aria-current="page">
-                Legion Gears
-              </Link>
-          <button 
-            data-collapse-toggle="navbar-default"
-            type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-default"
-            aria-expanded="false"
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
-            </svg>
-          </button>
-          <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-black  ">
+    <nav className="bg-gray-900 text-white relative">
+      <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
+        <Link href="/" className="text-2xl font-bold">
+          Legion Gears
+        </Link>
 
-              <Link href="/jacket" className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white " aria-current="page">
-                Jacket
-              </Link>
-              <Link href="/gloves" className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white " aria-current="page">
-                Gloves
-              </Link>
-              <Link href="/helmet" className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white " aria-current="page">
-                Helmets
-              </Link>
-              <button onClick={Logout} className='text-white '>logout</button>
-              { user.value &&  <MdAccountCircle onMouseOver={toggleDropdown} onMouseLeave={toggleDropdown} className='text-xl md:text-2xl text-white' />}
-              {!user.value && <Link href={'/login'}>
-                <button className='bg-white px-2 py-1 rounded-md text-black text-sm'>login</button>
-              </Link>}
-              <div onClick={toggleCart} className='cart '>
-                <AiOutlineShoppingCart className='text-xl md:text-2xl text-white' />
-              </div>
-     
-            </ul>
+        <div className="flex ">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex space-x-6">
+            <Link href="/jackets" className="hover:text-pink-500">
+              Jackets
+            </Link>
+            <Link href="/helmet" className="hover:text-pink-500">
+              Helmets
+            </Link>
+            <Link href="/gloves" className="hover:text-pink-500">
+              Gloves
+            </Link>
           </div>
-          <div ref={ref} className={`w-72 z-50 h-[100vh] sideCart absolute top-0 right-0 bg-pink-100 p-10 transition-transform 
-              ${Object.keys(cart).length !== 0 ? 'translate-x-0' : 'translate-x-full'}`}>
-            <h2 className="font-bold">this is my shopping cart</h2>
-            <span onClick={toggleCart} className="absolute top-2 right-2 cursor-pointer text-2xl text-pink-500"><AiFillCloseCircle /></span>
-            <ol className='list-decimal'>
-              {Object.keys(cart).length == 0 && <div className='my-4 text-base font-normal'>Your cart is Empty!</div>}
-              {Object.keys(cart).map((k) => {
-                return <li key={k}>
-                  <div className='item flex my-5'>
-                    <div className='w-2/3 text-sm'>{cart[k].name}({cart[k].size}/{cart[k].variant})</div>
-                    <div className='flex font-semibold items-center justify-center w-1/3 '>
-                      <AiOutlineMinusCircle onClick={() => { removeFromCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant) }} className='cursor-pointer text-pink-500' />
-                      <span className='mx-2 text-sm'>{cart[k].qty}</span>
-                      <AiOutlinePlusCircle onClick={() => { addToCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant) }} className='cursor-pointer text-pink-500' />
-                    </div>
-                  </div>
-                </li>
-              })}
-            </ol>
-            <span className='font-bold'>
-              SubTotal: ₹{subTotal}
-            </span>
-
-
-            <div className="flex mt-5">
-              <Link href={'/checkout'} className="flex mx-auto mx-2 text-white bg-pink-500 border-0 py-2 px-2 focus:outline-none hover:bg-pink-600 rounded text-sm">
-                <button >CheckOut</button>
-              </Link>
-              <button onClick={clearCart} className="flex mx-auto mx-2 text-white bg-pink-500 border-0 py-2 px-2 focus:outline-none hover:bg-pink-600 rounded text-sm">Clear</button>
+          {/* Shopping Cart and Hamburger */}
+          <div className="flex space-x-4 ml-4">
+            <div className="cursor-pointer" onClick={toggleCart}>
+              <AiOutlineShoppingCart className="text-2xl" />
             </div>
-
+            <button
+              onClick={toggleNav}
+              className="inline-flex items-center p-2 w-10 h-10 justify-center rounded-lg md:hidden"
+            >
+              <HiMenuAlt3 className="text-2xl" />
+            </button>
           </div>
         </div>
-      </nav>
-    </div>
+      </div>
+
+      {/* Mobile Hamburger Menu */}
+      <div
+        className={`fixed top-0 left-0 w-full h-full bg-gray-800 text-white p-6 transform transition-transform duration-500 ${
+          isNavOpen ? "translate-y-0" : "-translate-y-full"
+        } z-50`}
+      >
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-xl font-bold">Menu</h2>
+          <AiFillCloseCircle
+            onClick={toggleNav}
+            className="text-2xl cursor-pointer"
+          />
+        </div>
+        <ul className="space-y-4 text-center">
+          <li>
+            <Link
+              href="/jacket"
+              className="hover:text-pink-500"
+              onClick={toggleNav}
+            >
+              Jacket
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/helmet"
+              className="hover:text-pink-500"
+              onClick={toggleNav}
+            >
+              Helmet
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/Gloves"
+              className="hover:text-pink-500"
+              onClick={toggleNav}
+            >
+              Gloves
+            </Link>
+          </li>
+        </ul>
+      </div>
+
+      {/* Cart Sidebar */}
+      <div
+        className={`fixed top-0 right-0 h-full bg-gray-800 text-white w-80 p-6 shadow-xl transform transition-transform duration-500 ${
+          isCartOpen ? "translate-x-0" : "translate-x-full"
+        } z-50`}
+      >
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-xl font-bold">Shopping Cart</h2>
+          <AiFillCloseCircle
+            onClick={toggleCart}
+            className="text-2xl cursor-pointer"
+          />
+        </div>
+
+        {/* Cart Items */}
+        <ol className="space-y-4">
+          {Object.keys(cart).length === 0 && (
+            <div className="text-center text-gray-400">Your cart is Empty!</div>
+          )}
+          {Object.keys(cart).map((k) => (
+            <li key={k} className="flex items-center justify-between">
+              <div>
+                <h3 className="font-semibold">{cart[k].name}</h3>
+                <p className="text-sm text-gray-400">Size: {cart[k].size}</p>
+                <p className="text-sm text-gray-400">Price: ₹{cart[k].price}</p>
+              </div>
+              <div className="flex items-center space-x-2">
+                <AiOutlineMinusCircle
+                  onClick={() =>
+                    removeFromCart(
+                      k,
+                      1,
+                      cart[k].price,
+                      cart[k].name,
+                      cart[k].size,
+                      cart[k].variant
+                    )
+                  }
+                  className="cursor-pointer text-pink-500 text-xl"
+                />
+                <span className="font-semibold">{cart[k].qty}</span>
+                <AiOutlinePlusCircle
+                  onClick={() =>
+                    addToCart(
+                      k,
+                      1,
+                      cart[k].price,
+                      cart[k].name,
+                      cart[k].size,
+                      cart[k].variant
+                    )
+                  }
+                  className="cursor-pointer text-pink-500 text-xl"
+                />
+              </div>
+            </li>
+          ))}
+        </ol>
+
+        {/* Subtotal */}
+        {Object.keys(cart).length > 0 && (
+          <>
+            <div className="mt-6 border-t border-gray-700 pt-4">
+              <h3 className="text-lg font-bold">Subtotal: ₹{subTotal}</h3>
+            </div>
+
+            {/* Buttons */}
+            <div className="mt-6 flex space-x-4">
+              <Link href="/checkout">
+                <button className="flex-1 bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded">
+                  Checkout
+                </button>
+              </Link>
+              <button
+                onClick={clearCart}
+                className="flex-1 bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded"
+              >
+                Clear Cart
+              </button>
+            </div>
+          </>
+        )}
+      </div>
+    </nav>
   );
-}
+};
 
 export default Navbar;

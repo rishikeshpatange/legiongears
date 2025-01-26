@@ -1,24 +1,68 @@
 [
   {
-    "title": "Himi 2 Edition",
-    "slug": "himi-sda-edition-rishi",
+    "title": "Supertech R10 LE Martinator R01 Helmet",
+    "slug": "hiSupertech R10 LE Martinator R01 Helmet purple XL",
     "desc": "The result of over 10 years of intensive study, development, and testing, the goal of the Supertech family of helmets is to create the most advanced....",
-    "img": "//www.alpinestars.com/cdn/shop/files/8302823-839-fr_LimitedEditionSupertechM10Squad23Helmet.jpg?v=1715030571&width=1600",
+    "img": "https://www.alpinestars.com/cdn/shop/files/8200825-7237-fr_supertech-r10-martinator-r01-helmet-ece06-dot-fim_45edb069-d556-4ef3-956b-6b0cb318e899.png?v=1733249091&width=960",
     "category": "helmets",
     "size": ["XL"],
-    "color": ["blue"],
+    "color": ["purple"],
     "price": 51399,
     "availabelQty": 1
   },
   {
-    "title": "Rider Gloves",
-    "slug": "rider-gloves",
-    "desc": "Premium gloves designed for comfort and durability.",
-    "img": "//www.alpinestars.com/cdn/shop/files/8302823-839-fr_LimitedEditionSupertechM10Squad23Helmet.jpg?v=1715030571&width=1600",
-    "category": "gloves",
-    "size": ["M", "L"],
-    "color": ["red", "black"],
-    "price": 2999,
-    "availabelQty": 10
+    "title": "Supertech R10 LE Martinator R01 Helmet",
+    "slug": "Supertech R10 LE Martinator R01 Helmet purple S",
+    "desc": "The result of over 10 years of intensive study, development, and testing, the goal of the Supertech family of helmets is to create the most advanced....",
+    "img": "https://www.alpinestars.com/cdn/shop/files/8200825-7237-fr_supertech-r10-martinator-r01-helmet-ece06-dot-fim_45edb069-d556-4ef3-956b-6b0cb318e899.png?v=1733249091&width=960",
+    "category": "helmets",
+    "size": ["S"],
+    "color": ["purple"],
+    "price": 51399,
+    "availabelQty": 1
+  },
+  {
+    "title": "Supertech R10 Team Helmet",
+    "slug": "Supertech R10 Team Helmet medium",
+    "desc": "The result of over 10 years of intensive study, development, and testing, the goal of the Supertech family of helmets is to create the most advanced....",
+    "img": "https://www.alpinestars.com/cdn/shop/files/8200224-1352-r2_s-r10-helmet.png?v=1713261377&width=960",
+    "category": "helmets",
+    "size": ["M"],
+    "color": ["red"],
+    "price": 51399,
+    "availabelQty": 1
+  },
+  {
+    "title": "Supertech R10 Element Helmet",
+    "slug": "Supertech R10 Element Helmet medium",
+    "desc": "The result of over 10 years of intensive study, development, and testing, the goal of the Supertech family of helmets is to create the most advanced....",
+    "img": "https://www.alpinestars.com/cdn/shop/files/8200324-1368-r1_s-r10-helmet.png?v=1713261530&width=960",
+    "category": "helmets",
+    "size": ["M"],
+    "color": ["black"],
+    "price": 71399,
+    "availabelQty": 1
+  },
+  {
+    "title": "Supertech R10 Solid Helmet",
+    "slug": "Supertech R10 Solid Helmet XL",
+    "desc": "The result of over 10 years of intensive study, development, and testing, the goal of the Supertech family of helmets is to create the most advanced....",
+    "img": "https://www.alpinestars.com/cdn/shop/files/8200124-2170-r2_s-r10-helmet.png?v=1713261324&width=960",
+    "category": "helmets",
+    "size": ["XL"],
+    "color": ["white"],
+    "price": 71399,
+    "availabelQty": 1
+  },
+  {
+    "title": "Supertech R10 Solid Helmet",
+    "slug": "Supertech R10 Solid Helmet Small",
+    "desc": "The result of over 10 years of intensive study, development, and testing, the goal of the Supertech family of helmets is to create the most advanced....",
+    "img": "https://www.alpinestars.com/cdn/shop/files/8200124-2170-r2_s-r10-helmet.png?v=1713261324&width=960",
+    "category": "helmets",
+    "size": ["S"],
+    "color": ["red"],
+    "price": 71399,
+    "availabelQty": 1
   }
 ]
