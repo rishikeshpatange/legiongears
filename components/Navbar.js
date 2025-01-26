@@ -5,6 +5,7 @@ import {
   AiOutlinePlusCircle,
   AiOutlineMinusCircle,
 } from "react-icons/ai";
+import { IoIosArrowForward } from "react-icons/io";
 import { HiMenuAlt3 } from "react-icons/hi";
 import Link from "next/link";
 
@@ -27,7 +28,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
           Legion Gears
         </Link>
 
-        <div className="flex ">
+        <div className="flex">
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-6">
             <Link href="/jackets" className="hover:text-gray-500">
@@ -40,8 +41,9 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
               Gloves
             </Link>
           </div>
+
           {/* Shopping Cart and Hamburger */}
-          <div className="flex space-x-4 ml-4">
+          <div className="flex space-x-4 ml-4 items-center ">
             <div className="cursor-pointer" onClick={toggleCart}>
               <AiOutlineShoppingCart className="text-2xl" />
             </div>
@@ -55,6 +57,14 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
         </div>
       </div>
 
+      {/* Background Blur Overlay for Cart */}
+      {isCartOpen && (
+        <div
+          onClick={toggleCart}
+          className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md  z-40"
+        ></div>
+      )}
+
       {/* Mobile Hamburger Menu */}
       <div
         className={`fixed top-0 left-0 w-full h-full bg-white text-gray-900 p-6 transform transition-transform duration-500 ${
@@ -62,38 +72,47 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
         } z-50`}
       >
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-xl font-bold">Menu</h2>
+          <h2 className="text-xl font-bold">Legion Gears</h2>
           <AiFillCloseCircle
             onClick={toggleNav}
             className="text-2xl cursor-pointer"
           />
         </div>
-        <ul className="space-y-4 text-center">
+        <ul className="space-y-10 mt-9 text-center">
           <li>
             <Link
               href="/jacket"
-              className="hover:text-gray-500"
+              className="text-xl font-bold"
               onClick={toggleNav}
             >
-              Jacket
+              <div className="hover:text-red-600 text-gray-900 flex justify-between items-center">
+                <h2>Jacket</h2>
+                <IoIosArrowForward />
+              </div>
             </Link>
           </li>
           <li>
             <Link
               href="/helmet"
-              className="hover:text-gray-500"
+              className="text-xl font-bold"
               onClick={toggleNav}
             >
-              Helmet
+              <div className="hover:text-red-600 text-gray-900 flex justify-between items-center">
+                <h2>Helmet</h2>
+                <IoIosArrowForward />
+              </div>
             </Link>
           </li>
           <li>
             <Link
-              href="/Gloves"
-              className="hover:text-gray-500"
+              href="/gloves"
+              className="text-xl font-bold"
               onClick={toggleNav}
             >
-              Gloves
+              <div className="hover:text-red-600 text-gray-900 flex justify-between items-center">
+                <h2>Gloves</h2>
+                <IoIosArrowForward />
+              </div>
             </Link>
           </li>
         </ul>

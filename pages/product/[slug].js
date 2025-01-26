@@ -69,7 +69,7 @@ const Post = ({ addToCart, product, variants, buyNow }) => {
                 <div className="flex ml-6 items-center">
                   <span className="mr-3">Size</span>
                   <div className="relative">
-                    <select value={size} onChange={(e) => { refreshVariant(e.target.value, color) }} className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
+                    <select value={size} onChange={(e) => { refreshVariant(e.target.value, color) }} className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:border-gray-500 text-base pl-3 pr-10">
                       {Object.keys(variants[color]).map((variantSize) => (
                         <option key={variantSize} value={variantSize}>{variantSize}</option>
                       ))}
@@ -79,12 +79,12 @@ const Post = ({ addToCart, product, variants, buyNow }) => {
               </div>
               <div className="flex">
                 <span className="title-font font-medium text-2xl text-gray-900">₹{product.price}</span>
-                <button className="flex ml-8 text-white bg-pink-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-pink-600 rounded" onClick={() => { buyNow(slug, 1, product.price, product.title, size, color) }}>Buy Now</button>
-                <button onClick={() => { addToCart(slug, 1, product.price, product.title, size, color) }} className="flex ml-4 text-white bg-pink-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-pink-600 rounded">Add to Cart</button>
+                <button className="flex ml-8 text-white bg-gray-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-gray-600 rounded" onClick={() => { buyNow(slug, 1, product.price, product.title, size, color) }}>Buy Now</button>
+                <button onClick={() => { addToCart(slug, 1, product.price, product.title, size, color) }} className="flex ml-4 text-white bg-gray-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-gray-600 rounded">Add to Cart</button>
               </div>
               <div className="pin mt-5 flex space-x-2">
-                <input onChange={onChangePin} type="text" className='rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10' placeholder='Pincode' />
-                <button onClick={checkServiceability} className='flex ml-auto text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded'>Check</button>
+                <input onChange={onChangePin} type="text" className='rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:border-gray-500 text-base pl-3 pr-10' placeholder='Pincode' />
+                <button onClick={checkServiceability} className='flex ml-auto text-white bg-gray-500 border-0 py-2 px-6 focus:outline-none hover:bg-gray-600 rounded'>Check</button>
               </div>
 
               {(!service && service != null) && <div className='text-red-700 text-sm mt-3'>Sorry! We do not deliver to this pincode yet</div>}
