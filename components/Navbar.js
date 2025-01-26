@@ -21,7 +21,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
   };
 
   return (
-    <nav className="bg-gray-900 text-white relative">
+    <nav className="bg-zinc-900 text-white relative">
       <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
         <Link href="/" className="text-2xl font-bold">
           Legion Gears
@@ -30,13 +30,13 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
         <div className="flex ">
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-6">
-            <Link href="/jackets" className="hover:text-pink-500">
+            <Link href="/jackets" className="hover:text-gray-500">
               Jackets
             </Link>
-            <Link href="/helmet" className="hover:text-pink-500">
+            <Link href="/helmet" className="hover:text-gray-500">
               Helmets
             </Link>
-            <Link href="/gloves" className="hover:text-pink-500">
+            <Link href="/gloves" className="hover:text-gray-500">
               Gloves
             </Link>
           </div>
@@ -57,7 +57,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
 
       {/* Mobile Hamburger Menu */}
       <div
-        className={`fixed top-0 left-0 w-full h-full bg-gray-800 text-white p-6 transform transition-transform duration-500 ${
+        className={`fixed top-0 left-0 w-full h-full bg-white text-gray-900 p-6 transform transition-transform duration-500 ${
           isNavOpen ? "translate-y-0" : "-translate-y-full"
         } z-50`}
       >
@@ -72,7 +72,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
           <li>
             <Link
               href="/jacket"
-              className="hover:text-pink-500"
+              className="hover:text-gray-500"
               onClick={toggleNav}
             >
               Jacket
@@ -81,7 +81,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
           <li>
             <Link
               href="/helmet"
-              className="hover:text-pink-500"
+              className="hover:text-gray-500"
               onClick={toggleNav}
             >
               Helmet
@@ -90,7 +90,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
           <li>
             <Link
               href="/Gloves"
-              className="hover:text-pink-500"
+              className="hover:text-gray-500"
               onClick={toggleNav}
             >
               Gloves
@@ -101,7 +101,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
 
       {/* Cart Sidebar */}
       <div
-        className={`fixed top-0 right-0 h-full bg-gray-800 text-white w-80 p-6 shadow-xl transform transition-transform duration-500 ${
+        className={`fixed top-0 right-0 h-full bg-white text-gray-900 w-80 p-6 shadow-xl transform transition-transform duration-500 ${
           isCartOpen ? "translate-x-0" : "translate-x-full"
         } z-50`}
       >
@@ -123,6 +123,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
               <div>
                 <h3 className="font-semibold">{cart[k].name}</h3>
                 <p className="text-sm text-gray-400">Size: {cart[k].size}</p>
+                <p className="text-sm text-gray-400">Color: {cart[k].color}</p>
                 <p className="text-sm text-gray-400">Price: ₹{cart[k].price}</p>
               </div>
               <div className="flex items-center space-x-2">
@@ -137,7 +138,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                       cart[k].variant
                     )
                   }
-                  className="cursor-pointer text-pink-500 text-xl"
+                  className="cursor-pointer text-gray-500 text-xl"
                 />
                 <span className="font-semibold">{cart[k].qty}</span>
                 <AiOutlinePlusCircle
@@ -151,7 +152,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                       cart[k].variant
                     )
                   }
-                  className="cursor-pointer text-pink-500 text-xl"
+                  className="cursor-pointer text-gray-500 text-xl"
                 />
               </div>
             </li>
@@ -168,7 +169,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
             {/* Buttons */}
             <div className="mt-6 flex space-x-4">
               <Link href="/checkout">
-                <button className="flex-1 bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded">
+                <button className="flex-1 bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded">
                   Checkout
                 </button>
               </Link>
