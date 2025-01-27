@@ -1,22 +1,11 @@
 [
   {
-    "title": "Supertech R10 LE Martinator R01 Helmet",
+    "title": "Supertech R10 LE Martinator R01 ",
     "slug": "hiSupertech R10 LE Martinator R01 Helmet purple XL",
     "desc": "The result of over 10 years of intensive study, development, and testing, the goal of the Supertech family of helmets is to create the most advanced....",
     "img": "https://www.alpinestars.com/cdn/shop/files/8200825-7237-fr_supertech-r10-martinator-r01-helmet-ece06-dot-fim_45edb069-d556-4ef3-956b-6b0cb318e899.png?v=1733249091&width=960",
     "category": "helmets",
     "size": ["XL"],
-    "color": ["purple"],
-    "price": 51399,
-    "availabelQty": 1
-  },
-  {
-    "title": "Supertech R10 LE Martinator R01 Helmet",
-    "slug": "Supertech R10 LE Martinator R01 Helmet purple S",
-    "desc": "The result of over 10 years of intensive study, development, and testing, the goal of the Supertech family of helmets is to create the most advanced....",
-    "img": "https://www.alpinestars.com/cdn/shop/files/8200825-7237-fr_supertech-r10-martinator-r01-helmet-ece06-dot-fim_45edb069-d556-4ef3-956b-6b0cb318e899.png?v=1733249091&width=960",
-    "category": "helmets",
-    "size": ["S"],
     "color": ["purple"],
     "price": 51399,
     "availabelQty": 1
@@ -45,7 +34,7 @@
   },
   {
     "title": "Supertech R10 Solid Helmet",
-    "slug": "Supertech R10 Solid Helmet XL",
+    "slug": "Supertech R10 Solid Helmet XL white",
     "desc": "The result of over 10 years of intensive study, development, and testing, the goal of the Supertech family of helmets is to create the most advanced....",
     "img": "https://www.alpinestars.com/cdn/shop/files/8200124-2170-r2_s-r10-helmet.png?v=1713261324&width=960",
     "category": "helmets",
@@ -55,14 +44,91 @@
     "availabelQty": 1
   },
   {
-    "title": "Supertech R10 Solid Helmet",
-    "slug": "Supertech R10 Solid Helmet Small",
+    "title": "Faster V3 Leather Jacket",
+    "slug": "Faster V3 Leather Jacket black xl",
     "desc": "The result of over 10 years of intensive study, development, and testing, the goal of the Supertech family of helmets is to create the most advanced....",
-    "img": "https://www.alpinestars.com/cdn/shop/files/8200124-2170-r2_s-r10-helmet.png?v=1713261324&width=960",
-    "category": "helmets",
+    "img": "https://www.alpinestars.com/cdn/shop/files/3103525-1100-m1_faster-v3-leather-jacket.png?v=1725842649&width=960",
+    "category": "jacket",
+    "size": ["XL"],
+    "color": ["black"],
+    "price": 30246,
+    "availabelQty": 1
+  },
+  {
+    "title": "Faster V3 Leather Jacket red",
+    "slug": "Faster V3 Leather Jacket red S",
+    "desc": "The result of over 10 years of intensive study, development, and testing, the goal of the Supertech family of helmets is to create the most advanced....",
+    "img": "//www.alpinestars.com/cdn/shop/files/3103525-1030-m1_faster-v3-leather-jacketv2.png?v=1726686395&width=1600",
+    "category": "jacket",
     "size": ["S"],
     "color": ["red"],
-    "price": 71399,
+    "price": 30246,
+    "availabelQty": 1
+  },
+  {
+    "title": "Missile V3 Ignition Leather Jacket",
+    "slug": "Missile V3 Ignition Leather Jacket L",
+    "desc": "The result of over 10 years of intensive study, development, and testing, the goal of the Supertech family of helmets is to create the most advanced....",
+    "img": "//www.alpinestars.com/cdn/shop/files/3100325-12-m1_missile-v3-ignition-leather-jacket.png?v=1725841416&width=1600",
+    "category": "jacket",
+    "size": ["L"],
+    "color": ["black"],
+    "price": 50246,
+    "availabelQty": 1
+  },
+  {
+    "title": "Bionic Plus V2 Protection Jacket",
+    "slug": "Bionic Plus V2 Protection Jacket M red",
+    "desc": "The result of over 10 years of intensive study, development, and testing, the goal of the Supertech family of helmets is to create the most advanced....",
+    "img": "https://www.alpinestars.com/cdn/shop/files/3200125-1030-m1_t-jaws-v4-wp-jacket_788fbe13-247b-47c9-abfd-32b0c5c9b787.png?v=1725904684",
+    "category": "jacket",
+    "size": ["M"],
+    "color": ["red"],
+    "price": 20246,
+    "availabelQty": 1
+  },
+  {
+    "title": "Tech 10 Enduro Boots",
+    "slug": "Tech 10 Enduro Boots black m",
+    "desc": "The result of over 10 years of intensive study, development, and testing, the goal of the Supertech family of helmets is to create the most advanced....",
+    "img": "//www.alpinestars.com/cdn/shop/files/2010025-10-Black-F-T10-MX-Boots.png?v=1721062627&width=1600",
+    "category": "boots",
+    "size": ["M"],
+    "color": ["black"],
+    "price": 50246,
+    "availabelQty": 1
+  },
+  {
+    "title": "Tech 7 Boots",
+    "slug": "Tech 7 Boots purple XL",
+    "desc": "The result of over 10 years of intensive study, development, and testing, the goal of the Supertech family of helmets is to create the most advanced....",
+    "img": "//www.alpinestars.com/cdn/shop/files/2012025-38-fr_tech-7-boot.png?v=1731601512&width=1600",
+    "category": "boots",
+    "size": ["XL"],
+    "color": ["purple"],
+    "price": 42246,
+    "availabelQty": 1
+  },
+  {
+    "title": "Tech 7 Boots Neon",
+    "slug": "Tech 7 Boots yellow XL",
+    "desc": "The result of over 10 years of intensive study, development, and testing, the goal of the Supertech family of helmets is to create the most advanced....",
+    "img": "//www.alpinestars.com/cdn/shop/files/2012025-551-Yellow-F-T7-MX-Boots_db05ca4a-80f0-4867-a9c9-de8a088b6ae4.png?v=1721255242&width=1600",
+    "category": "boots",
+    "size": ["XL"],
+    "color": ["yellow"],
+    "price": 42246,
+    "availabelQty": 1
+  },
+  {
+    "title": "Tech 10 Union LE Boots",
+    "slug": "Tech 10 Union LE Boots XL",
+    "desc": "The result of over 10 years of intensive study, development, and testing, the goal of the Supertech family of helmets is to create the most advanced....",
+    "img": "//www.alpinestars.com/cdn/shop/files/2010020-3372-fr_LEUniontTECH10boots.png?v=1719499384&width=1600",
+    "category": "boots",
+    "size": ["XL"],
+    "color": ["blue"],
+    "price": 62246,
     "availabelQty": 1
   }
 ]

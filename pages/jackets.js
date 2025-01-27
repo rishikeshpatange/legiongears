@@ -2,12 +2,12 @@ import Link from "next/link";
 import React from "react";
 import product from "../data/product.json";
 
-const Helmets = ({ products }) => {
+const Jackets = ({ products }) => {
   return (
     <section className="text-gray-600 body-font mt-10 m-4 p-4 ">
       <div className="container mx-auto p-0 mb-10">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-bold text-black mb-6">
-          Motorcycle Helmets
+          Motorcycle Jackets
         </h1>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-0">
           {Object.keys(products).map((item) => {
@@ -85,12 +85,12 @@ const Helmets = ({ products }) => {
 };
 
 export async function getServerSideProps(context) {
-  // Filter products by category ("helmets")
-  const helmets = product.filter((product) => product.category === "helmets");
+  // Filter products by category ("Jackets")
+  const Jackets = product.filter((product) => product.category === "jacket");
 
   // Group products by title and merge their sizes/colors
   let groupedProducts = {};
-  for (let item of helmets) {
+  for (let item of Jackets) {
     if (item.title in groupedProducts) {
       if (!groupedProducts[item.title].color.includes(item.color[0])) {
         groupedProducts[item.title].color.push(...item.color);
@@ -108,4 +108,4 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default Helmets;
+export default Jackets;

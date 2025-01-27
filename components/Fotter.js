@@ -13,7 +13,7 @@ const Fotter = () => {
               Legion Gears
             </span>
           </a>
-          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-white sm:mb-0">
             <li>
               <a href="#" className="hover:underline me-4 md:me-6">
                 About
@@ -36,8 +36,8 @@ const Fotter = () => {
             </li>
           </ul>
         </div>
-        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
+        <hr className="my-6 text-white sm:mx-autolg:my-8" />
+        <span className="block text-sm text-white sm:text-center">
           © 2023{" "}
           <a href="https://Legion Gears.com/" className="hover:underline">
             Legion Gears™

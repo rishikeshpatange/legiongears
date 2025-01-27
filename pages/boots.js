@@ -2,12 +2,12 @@ import Link from "next/link";
 import React from "react";
 import product from "../data/product.json";
 
-const Helmets = ({ products }) => {
+const Boots = ({ products }) => {
   return (
     <section className="text-gray-600 body-font mt-10 m-4 p-4 ">
       <div className="container mx-auto p-0 mb-10">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-bold text-black mb-6">
-          Motorcycle Helmets
+          Motorcycle Boots
         </h1>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-0">
           {Object.keys(products).map((item) => {
@@ -68,6 +68,9 @@ const Helmets = ({ products }) => {
                         {products[item].color.includes("white") && (
                           <button className="border-2 border-gray-300 bg-white rounded-full w-6 h-6 focus:outline-none"></button>
                         )}
+                        {products[item].color.includes("yellow") && (
+                          <button className="border-2 border-gray-300 bg-yellow-400 rounded-full w-6 h-6 focus:outline-none"></button>
+                        )}
                       </div>
                     </div>
                     <p className="mt-4 text-gray-900 ">
@@ -85,12 +88,12 @@ const Helmets = ({ products }) => {
 };
 
 export async function getServerSideProps(context) {
-  // Filter products by category ("helmets")
-  const helmets = product.filter((product) => product.category === "helmets");
+  // Filter products by category ("Boots")
+  const Boots = product.filter((product) => product.category === "boots");
 
   // Group products by title and merge their sizes/colors
   let groupedProducts = {};
-  for (let item of helmets) {
+  for (let item of Boots) {
     if (item.title in groupedProducts) {
       if (!groupedProducts[item.title].color.includes(item.color[0])) {
         groupedProducts[item.title].color.push(...item.color);
@@ -108,4 +111,4 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default Helmets;
+export default Boots;

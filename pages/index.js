@@ -48,21 +48,8 @@ export default function Home() {
               </p>
             </div>
             </Link>
-            <Link href="./gloves">
-            <div className="bg-black rounded-lg shadow-md overflow-hidden">
-              <Image
-                src="/Images/gloves1.jpeg"
-                alt="Card 1"
-                width={300}
-                height={200}
-                className="w-full h-auto"
-              />
-              <p className="mt-4 text-xl text-white">
-                Gloves
-              </p>
-            </div>
-            </Link>
-            <Link href="./jacket">
+
+            <Link href="./jackets">
             <div className="bg-black rounded-lg shadow-md overflow-hidden">
               <Image
                 src="/Images/jacket1.jpeg"
@@ -87,6 +74,20 @@ export default function Home() {
               />
               <p className="mt-4 text-xl text-white">
                 boots
+              </p>
+            </div>
+            </Link>
+            <Link href="./gloves">
+            <div className="bg-black rounded-lg shadow-md overflow-hidden">
+              <Image
+                src="/Images/gloves1.jpeg"
+                alt="Card 1"
+                width={300}
+                height={200}
+                className="w-full h-auto"
+              />
+              <p className="mt-4 text-xl text-white">
+                Gloves
               </p>
             </div>
             </Link>

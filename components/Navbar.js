@@ -37,8 +37,8 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
             <Link href="/helmet" className="hover:text-gray-500">
               Helmets
             </Link>
-            <Link href="/gloves" className="hover:text-gray-500">
-              Gloves
+            <Link href="/boots" className="hover:text-gray-500">
+              Boots
             </Link>
           </div>
 
@@ -105,12 +105,12 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
           </li>
           <li>
             <Link
-              href="/gloves"
+              href="/boots"
               className="text-xl font-bold"
               onClick={toggleNav}
             >
               <div className="hover:text-red-600 text-gray-900 flex justify-between items-center">
-                <h2>Gloves</h2>
+                <h2>Boots</h2>
                 <IoIosArrowForward />
               </div>
             </Link>
