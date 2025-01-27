@@ -9,13 +9,9 @@ import { IoIosArrowForward } from "react-icons/io";
 import { HiMenuAlt3 } from "react-icons/hi";
 import Link from "next/link";
 
-const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
-  const [isCartOpen, setIsCartOpen] = useState(false);
-  const [isNavOpen, setIsNavOpen] = useState(false);
+const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal, toggleCart, isCartOpen }) => {
 
-  const toggleCart = () => {
-    setIsCartOpen(!isCartOpen);
-  };
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -81,7 +77,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
         <ul className="space-y-10 mt-9 text-center">
           <li>
             <Link
-              href="/jacket"
+              href="/jackets"
               className="text-xl font-bold"
               onClick={toggleNav}
             >
@@ -142,7 +138,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
               <div>
                 <h3 className="font-semibold">{cart[k].name}</h3>
                 <p className="text-sm text-gray-400">Size: {cart[k].size}</p>
-                <p className="text-sm text-gray-400">Color: {cart[k].color}</p>
+                <p className="text-sm text-gray-400">Color: {cart[k].variant}</p>
                 <p className="text-sm text-gray-400">Price: ₹{cart[k].price}</p>
               </div>
               <div className="flex items-center space-x-2">
